@@ -33,19 +33,14 @@ floating_modifier $mod
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
-
 # start a terminal
 bindsym $mod+Return exec alacritty
-
 # start a browser 
 bindsym $mod+a exec firefox 
-
 # start a file manager 
 bindsym $mod+q exec thunar
 # print mecanism 
 bindsym Print exec scrot -s ~/images/screnshots/screenshot_%Y-%m-%d_%H-%M-%S.png
-# neovim open 
-bindsym $mod+n exec alacritty -e nvim
 # kill focused window
 bindsym $mod+Shift+q kill
 
