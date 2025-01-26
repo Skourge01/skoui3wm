@@ -49,6 +49,8 @@ install_general_apps() {
         libxft \
         libxinerama \
         i3
+
+    yay -S vscodium-bin --noconfirm 
 }
 
 # Executar funções
