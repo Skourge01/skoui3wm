@@ -45,7 +45,7 @@ bindsym Print exec scrot -s ~/images/screnshots/screenshot_%Y-%m-%d_%H-%M-%S.png
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run -fn "Fira Code:size=13" -nb "#121212" -nf "#ffffff" -sb "#848484" -sf "#121212" -p "Run: "
+bindsym $mod+d exec --no-startup-id dmenu_run -fn "Fira Code:size=13" -nb "#000000" -nf "#ffffff" -sb "#121212" -sf "#ffffff" -p "Run: "
 
 # change focus
 bindsym $mod+j focus left
