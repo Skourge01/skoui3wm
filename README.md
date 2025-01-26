@@ -11,6 +11,12 @@ my config for i3wm
 - firefox
 - thunar
 - xorg ( all )
+- discord 
+- feh 
+- lxappearance 
+- materia-gtk-themes 
+- nodejs
+- neovim 
 ## Install zsh config 
 - clone repo 
 ```
