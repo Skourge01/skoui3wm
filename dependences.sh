@@ -42,7 +42,13 @@ install_general_apps() {
         alacritty \
         thunar \
         picom \
-        nodejs
+        nodejs \
+        xorg-server \
+        xorg-xinit \
+        libx11 \
+        libxft \
+        libxinerama \
+        i3
 }
 
 # Executar funções
