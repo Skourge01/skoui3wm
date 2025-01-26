@@ -18,6 +18,10 @@ install_dependencies() {
 install_yay() {
     echo "Baixando e instalando o yay..."
     cd /tmp || exit
+    if [ -d yay ]; then
+        echo "Removendo diretório antigo do yay..."
+        rm -rf yay
+    fi
     git clone https://aur.archlinux.org/yay.git
     cd yay || exit
     makepkg -si --noconfirm
@@ -26,20 +30,19 @@ install_yay() {
 # Função para instalar aplicativos gerais
 install_general_apps() {
     echo "Instalando aplicativos gerais..."
-    # Insira os pacotes que você deseja instalar abaixo:
     sudo pacman -S --needed --noconfirm \
         firefox \
         neovim \
         discord \
-	feh \
-	lxappearance \
-	materia-gtk-theme \
-	ttf-fira-code \ 
-	dmenu \ 
-	alacritty \ 
-	thunar \ 
-	picom \ 
-   	nodejs      
+        feh \
+        lxappearance \
+        materia-gtk-theme \
+        ttf-fira-code \
+        dmenu \
+        alacritty \
+        thunar \
+        picom \
+        nodejs
 }
 
 # Executar funções
@@ -53,4 +56,3 @@ if command -v yay &> /dev/null; then
 else
     echo "Ocorreu um erro durante a instalação do yay."
 fi
-
