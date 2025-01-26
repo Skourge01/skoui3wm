@@ -33,6 +33,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.
 ```
 git clone https://github.com/zsh-users/zsh-completions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions
 ```
+## Theme for zsh 
+- [agnoster](https://github.com/ohmyzsh/ohmyzsh/wiki/themes)
 ## Manual plugins in .zshrc 
 ```
 plugins=(
