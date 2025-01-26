@@ -25,6 +25,8 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+a exec firefox 
 # start a file manager 
 bindsym $mod+q exec thunar
+# start a code editor 
+bindsym $mod+c exec vscodium
 # print mecanism 
 bindsym Print exec scrot -s ~/images/screnshots/screenshot_%Y-%m-%d_%H-%M-%S.png
 # kill focused window
