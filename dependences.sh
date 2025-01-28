@@ -41,7 +41,6 @@ install_general_apps() {
         dmenu \
         alacritty \
         thunar \
-        picom \
         nodejs \
         xorg-server \
         xorg-xinit \
