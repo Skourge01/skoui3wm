@@ -5,7 +5,6 @@ my config for i3wm
 - alacritty
 - i3
 - i3status
-- picom
 - zsh
 - oh my zsh
 - firefox
