@@ -40,7 +40,7 @@ install_general_apps() {
         ttf-fira-code \
         dmenu \
         alacritty \
-        thunar \
+        yazi \
         nodejs \
         xorg-server \
         xorg-xinit \
