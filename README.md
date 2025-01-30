@@ -1,12 +1,10 @@
 # skoui3wm
-my config for i3wm 
+THE MINIMAL I3WM CONFIG
 
 ## dependences
 - alacritty
 - i3
 - i3status
-- zsh
-- oh my zsh
 - firefox
 - ranger
 - xorg ( all )
@@ -16,38 +14,14 @@ my config for i3wm
 - materia-gtk-themes 
 - nodejs
 - neovim 
-## Install zsh config 
+## Install bash config 
 - clone repo 
 ```
-git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+
 ```
-- default shell 
-```
-chsh -s $(which zsh)
-```
-##  Plugins install
-- Fast Syntax Highlighting
-```
-git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
-```
-- Zsh Autocompletions
-```
-git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-```
-- Zsh Completions
-```
-git clone https://github.com/zsh-users/zsh-completions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions
-```
-## Theme for zsh 
+## Theme for bash
 - [agnoster](https://github.com/ohmyzsh/ohmyzsh/wiki/themes)
-## Manual plugins in .zshrc 
-```
-plugins=(
-  git
-  fast-syntax-highlighting
-  zsh-autosuggestions
-  zsh-completions
-)
 
 ```
 - GitHub: [Skourge01](https://github.com/Skourge01)
