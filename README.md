@@ -8,7 +8,7 @@ my config for i3wm
 - zsh
 - oh my zsh
 - firefox
-- thunar
+- ranger
 - xorg ( all )
 - discord 
 - feh 
