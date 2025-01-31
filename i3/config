@@ -16,7 +16,7 @@ tiling_drag modifier titlebar
 # start a terminal
 bindsym $mod+Return exec alacritty
 bindsym $mod+a exec firefox
-bindsym $mod+q exec alacritty -e ranger
+bindsym $mod+q exec thunar
 bindsym $mod+c exec vscodium
 bindsym $mod+m exec alacritty -e cmus
 # kill focused window
