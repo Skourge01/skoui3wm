@@ -1,42 +1,62 @@
-# modkey                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        .config/i3/config# modkey
+# modkey 
 set $mod Mod4
-# font
+# font 
 font pango:Fira code 8
-# autostart
+# autostart 
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 exec --no-startup-id xrandr --output HDMI-1 --left-of eDP-1
-exec --no-startup-id feh --bg-scale Downloads/1r1kk9qi00961.jpg
-# Use pactl to adjust volume in PulseAudio.
+exec --no-startup-id feh --bg-scale Imagens/wallpapers/od_interstellar.jpg
+# environments
 set $refresh_i3status killall -SIGUSR1 i3status
-# Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 tiling_drag modifier titlebar
+# Keybinds!
 # start a terminal
-bindsym $mod+Return exec alacritty
-bindsym $mod+a exec firefox
+bindsym $mod+Return exec alacritty 
+# start a browser
+bindsym $mod+a exec firefox 
+# start a file manager
 bindsym $mod+q exec thunar
-bindsym $mod+c exec vscodium
-bindsym $mod+m exec alacritty -e cmus
+# start a code editor 
+bindsym $mod+c exec vscodium 
 # kill focused window
 bindsym $mod+Shift+q kill
+
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id dmenu_run
+
 # change focus
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+ccedilla focus right
+
+# alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
+
 # move focused window
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+ccedilla move right
+
+# alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
+
 # split in horizontal orientation
 bindsym $mod+h split h
+
 # split in vertical orientation
 bindsym $mod+v split v
+
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
@@ -50,8 +70,7 @@ bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
-# Define names for default workspaces for which we configure key bindings later on.
-# We use variables to avoid repeating the names in multiple places.
+# workspaces 
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
@@ -62,6 +81,11 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+
+# window settings
+for_window [class="^.*"] border pixel 2
+                          # class                 border  backgr. text    indicator child_border
+for_window [class="^.*"] client.focused          #77dd77 #285577 #ffffff #2e9ef4   #285577
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -96,12 +120,6 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
         bindsym j resize shrink width 10 px or 10 ppt
         bindsym k resize grow height 10 px or 10 ppt
         bindsym l resize shrink height 10 px or 10 ppt
@@ -120,22 +138,8 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
 bar {
         status_command i3status
-        output eDP-1
+        output eDP-1 
+
 }
-for_window [class="^.*"] border pixel 2
-                          # class                 border  backgr. text    indicator child_border
-for_window [class="^.*"] client.focused          #77dd77 #285577 #ffffff #2e9ef4   #285577
-
-
-
-
-
-
-
-
-
