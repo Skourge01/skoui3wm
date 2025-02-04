@@ -49,7 +49,7 @@ install_general_apps() {
         libxinerama \
         i3
 
-    yay -S vscodium-bin --noconfirm 
+    yay -S visual-studio-code-bin --noconfirm 
 }
 
 # Executar funções
