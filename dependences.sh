@@ -31,34 +31,55 @@ install_yay() {
     git clone https://aur.archlinux.org/yay.git
     cd yay || exit
     makepkg -si --noconfirm
-}
 # Função para instalar aplicativos gerais
-install_general_apps() {
-    echo "Instalando aplicativos gerais..."
-    sudo pacman -S --needed --noconfirm \
-        firefox \
-        neovim \
-        discord \
-        feh \
-        lxappearance \
-        materia-gtk-theme \
-        ttf-fira-code \
-        dmenu \
-        alacritty \
-        thunar \
-        nodejs \
-        xorg-server \
-        xorg-xinit \
-        libx11 \
-        libxft \
-        libxinerama \
-        i3
-
-    yay -S visual-studio-code-bin --noconfirm 
+check_and_install() {
+    if ! pacman -Qi "$1" &>/dev/null; then
+        echo "Instalando $1..."
+        sudo pacman -S --needed --noconfirm "$1"
+    else
+        echo "$1 já está instalado."
+    fi
 }
+
+install_general_apps() {
+    echo "Verificando e instalando aplicativos gerais..."
+
+    apps=(
+        firefox
+        neovim
+        discord
+        feh
+        lxappearance
+        materia-gtk-theme
+        ttf-fira-code
+        dmenu
+        alacritty
+        thunar
+        nodejs
+        xorg-server
+        xorg-xinit
+        libx11
+        libxft
+        libxinerama
+        i3
+    )
+
+    for app in "${apps[@]}"; do
+        check_and_install "$app"
+    done
+
+    if ! yay -Qi visual-studio-code-bin &>/dev/null; then
+        echo "Instalando Visual Studio Code..."
+        yay -S visual-studio-code-bin --noconfirm
+    else
+        echo "Visual Studio Code já está instalado."
+    fi
+}
+
 # Executar funções
-install_dependencies
-install_general_apps
+check_yay 
+check_and_install
+install_general_apps 
 # Verificação final
 if command -v yay &> /dev/null; then
     echo "yay instalado com sucesso!"
