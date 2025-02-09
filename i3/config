@@ -20,7 +20,7 @@ bindsym $mod+a exec firefox
 # start a file manager
 bindsym $mod+q exec thunar
 # start a code editor 
-bindsym $mod+c exec vscodium 
+bindsym $mod+c exec code
 # kill focused window
 bindsym $mod+Shift+q kill
 
