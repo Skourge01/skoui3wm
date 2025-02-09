@@ -13,7 +13,8 @@ THE MINIMAL I3WM CONFIG
 - lxappearance 
 - materia-gtk-themes 
 - nodejs
-- neovim 
+- neovim
+- visual-studio-code
 ## Install bash config 
 - clone repo 
 ```
