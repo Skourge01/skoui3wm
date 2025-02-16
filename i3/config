@@ -7,7 +7,8 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 exec --no-startup-id xrandr --output HDMI-1 --left-of eDP-1
-exec --no-startup-id feh --bg-scale Imagens/wallpapers/od_interstellar.jpg
+exec --no-startup-id feh --bg-scale Imagens/wallpapers/gruvbox_forest-4.jpg
+exec --no-startup-id picom & 
 # environments
 set $refresh_i3status killall -SIGUSR1 i3status
 floating_modifier $mod
